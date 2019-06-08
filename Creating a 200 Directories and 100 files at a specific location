@@ -1,0 +1,20 @@
+#!/usr/bin/python3
+#First creating a 200 directories 
+
+import os
+path="/home/ayush/Desktop/a"
+for i in  range(200) :
+    os.mkdir(os.path.join(path,str(i)))
+
+# now creating 100 files
+a=[]
+for r in range(100):
+    a.append(r)
+it=iter(a)    #to make a list iterable with no. inside a list with iter
+count=0
+for q in it:
+    open(os.path.expanduser(os.path.join("/home/ayush/Desktop/b", str(count) + ".txt")), "a")
+    count+=1
+    
+    
+    
